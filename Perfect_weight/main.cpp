@@ -21,15 +21,18 @@ int main()
     cout << "What is your weight in kg? " << endl;
     cin >> realWeight;
 
+
     if (gender == 'F') idealWeight = height * height * 0.00222;
     else idealWeight = height * height * 0.00227;
 
     cout << "idealWeight value is " << idealWeight << endl;
 
+
     float minWeight = idealWeight * (1.0 - TOLERANTS) ;
     float maxWeight = idealWeight * (1.0 + TOLERANTS );
 
     cout << "ideal weight shall be {" <<minWeight << " - "<< maxWeight <<"} kg\n";
+
 
     if (realWeight < minWeight) {
         cout << "You're under ideal weight" << endl;
